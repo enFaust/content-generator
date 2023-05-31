@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Web App</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}"
+  >
+</head>
+<body>
+    <div class="container">
+        <h1>Chat Web App</h1>
+        <div id="messages"></div>
+        <form id="chat-form" method="POST" action="/chat">
+            <input id="input-message" type="text" name="message" placeholder="Type your message">
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <script src="{{ url_for('static',filename='js/index.js') }}"></script>
+</body>
